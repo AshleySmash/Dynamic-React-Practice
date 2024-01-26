@@ -4,14 +4,17 @@ import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
+    // Wrap in <li> because we are using an <ul> in expensesList.js to display the messages
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
 
-      <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
-    </Card>
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+      </Card>
+    </li>
   );
 };
 
